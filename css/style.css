@@ -7274,7 +7274,7 @@ body {
   line-height: 1.8;
   font-weight: 300;
   color: gray;
-  background: url(../images/bg_4.jpg) no-repeat fixed;
+  background: url(../images/bg/bg_4.jpg) no-repeat fixed;
   background-size: cover; }
   body.menu-show {
     overflow: hidden;
@@ -7950,14 +7950,14 @@ h1, h2, h3, h4, h5,
       font-size: 18px; }
       .pricing-entry .text h3 span {
         background: #151111;
-        background: url(../images/bg_4.jpg) no-repeat fixed;
+        background: url(../images/bg/bg_4.jpg) no-repeat fixed;
         padding-right: 20px; }
     .pricing-entry .text .price {
       width: 80px;
       color: #c49b63;
       text-align: right;
       background: #151111;
-      background: url(../images/bg_4.jpg) no-repeat fixed;
+      background: url(../images/bg/bg_4.jpg) no-repeat fixed;
       font-size: 16px; }
 
 .menu-entry {
@@ -8390,7 +8390,27 @@ h1, h2, h3, h4, h5,
 .testimony {
   background: #c49b63;
   padding: 2em;
-  color: #fff; }
+  color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .testimony blockquote {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
+  .testimony .author {
+    min-height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .testimony.overlay {
     position: relative;
     z-index: 0; }
@@ -8405,7 +8425,7 @@ h1, h2, h3, h4, h5,
       opacity: .1;
       z-index: -1; }
   .testimony .author .image {
-    width: 40px; }
+    width: 60px; }
     .testimony .author .image img {
       border-radius: 50%;
       max-width: 100%; }
@@ -9300,3 +9320,11 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* CSS chỉnh sửa kích thước ảnh ở phần comment thành dạng avatar tròn */
+.comment-list .vcard.bio img {
+  width: 50px; /* Chiều rộng của avatar */
+  height: 50px; /* Chiều cao của avatar */
+  border-radius: 50%; /* Bo tròn ảnh để thành avatar */
+  object-fit: cover; /* Đảm bảo ảnh không bị bóp méo */
+}

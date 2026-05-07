@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 31, 2026 lúc 03:15 PM
--- Phiên bản máy phục vụ: 10.4.32-MariaDB
--- Phiên bản PHP: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: May 07, 2026 at 10:24 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `coffee_blend`
+-- Database: `coffee_blend`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `blog_comments`
+-- Table structure for table `blog_comments`
 --
 
 CREATE TABLE `blog_comments` (
@@ -40,7 +40,7 @@ CREATE TABLE `blog_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `blog_comments`
+-- Dumping data for table `blog_comments`
 --
 
 INSERT INTO `blog_comments` (`comment_id`, `post_id`, `user_id`, `commenter_name`, `commenter_email`, `comment_content`, `parent_id`, `status`, `created_at`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `blog_comments` (`comment_id`, `post_id`, `user_id`, `commenter_name
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `blog_posts`
+-- Table structure for table `blog_posts`
 --
 
 CREATE TABLE `blog_posts` (
@@ -71,7 +71,7 @@ CREATE TABLE `blog_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `blog_posts`
+-- Dumping data for table `blog_posts`
 --
 
 INSERT INTO `blog_posts` (`post_id`, `title`, `slug`, `excerpt`, `content`, `featured_image`, `author_id`, `views`, `comments_count`, `status`, `published_at`, `created_at`, `updated_at`) VALUES
@@ -82,7 +82,7 @@ INSERT INTO `blog_posts` (`post_id`, `title`, `slug`, `excerpt`, `content`, `fea
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `blog_tags`
+-- Table structure for table `blog_tags`
 --
 
 CREATE TABLE `blog_tags` (
@@ -91,7 +91,7 @@ CREATE TABLE `blog_tags` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `blog_tags`
+-- Dumping data for table `blog_tags`
 --
 
 INSERT INTO `blog_tags` (`post_id`, `tag_id`) VALUES
@@ -108,7 +108,7 @@ INSERT INTO `blog_tags` (`post_id`, `tag_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `bookings`
+-- Table structure for table `bookings`
 --
 
 CREATE TABLE `bookings` (
@@ -127,7 +127,7 @@ CREATE TABLE `bookings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `bookings`
+-- Dumping data for table `bookings`
 --
 
 INSERT INTO `bookings` (`booking_id`, `booking_code`, `user_id`, `customer_name`, `customer_phone`, `customer_email`, `booking_date`, `booking_time`, `guests`, `message`, `status`, `created_at`) VALUES
@@ -137,7 +137,7 @@ INSERT INTO `bookings` (`booking_id`, `booking_code`, `user_id`, `customer_name`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE `cart` (
@@ -150,7 +150,7 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `cart`
+-- Dumping data for table `cart`
 --
 
 INSERT INTO `cart` (`cart_id`, `user_id`, `product_id`, `quantity`, `size`, `added_at`) VALUES
@@ -160,7 +160,7 @@ INSERT INTO `cart` (`cart_id`, `user_id`, `product_id`, `quantity`, `size`, `add
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -176,7 +176,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`category_id`, `category_name`, `slug`, `description`, `parent_id`, `image`, `display_order`, `status`, `created_at`) VALUES
@@ -188,7 +188,7 @@ INSERT INTO `categories` (`category_id`, `category_name`, `slug`, `description`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contacts`
+-- Table structure for table `contacts`
 --
 
 CREATE TABLE `contacts` (
@@ -202,7 +202,7 @@ CREATE TABLE `contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `contacts`
+-- Dumping data for table `contacts`
 --
 
 INSERT INTO `contacts` (`contact_id`, `name`, `email`, `subject`, `message`, `status`, `created_at`) VALUES
@@ -211,7 +211,7 @@ INSERT INTO `contacts` (`contact_id`, `name`, `email`, `subject`, `message`, `st
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -236,7 +236,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `orders`
+-- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`order_id`, `order_code`, `user_id`, `customer_name`, `customer_email`, `customer_phone`, `customer_address`, `note`, `subtotal`, `shipping_fee`, `discount`, `total`, `payment_method`, `payment_status`, `order_status`, `order_date`, `delivery_date`, `completed_at`) VALUES
@@ -247,7 +247,7 @@ INSERT INTO `orders` (`order_id`, `order_code`, `user_id`, `customer_name`, `cus
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_details`
+-- Table structure for table `order_details`
 --
 
 CREATE TABLE `order_details` (
@@ -263,7 +263,7 @@ CREATE TABLE `order_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `order_details`
+-- Dumping data for table `order_details`
 --
 
 INSERT INTO `order_details` (`detail_id`, `order_id`, `product_id`, `product_name`, `product_image`, `quantity`, `unit_price`, `subtotal`, `size`) VALUES
@@ -274,7 +274,7 @@ INSERT INTO `order_details` (`detail_id`, `order_id`, `product_id`, `product_nam
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -285,6 +285,7 @@ CREATE TABLE `products` (
   `short_description` varchar(500) DEFAULT NULL,
   `price` decimal(10,2) NOT NULL,
   `sale_price` decimal(10,2) DEFAULT NULL,
+  `size` varchar(20) DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
   `image_main` varchar(255) DEFAULT NULL,
   `images` text DEFAULT NULL COMMENT 'JSON array of image paths',
@@ -298,39 +299,39 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `products`
+-- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `product_name`, `slug`, `description`, `short_description`, `price`, `sale_price`, `category_id`, `image_main`, `images`, `stock`, `sold`, `featured`, `best_seller`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Cà Phê Sữa Đá', 'ca-phe-sua-da', NULL, 'Hương vị Việt truyền thống đậm đà.', 35000.00, NULL, 1, 'images/drink/vietnamese_coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(2, 'Espresso', 'espresso', NULL, 'Đậm đặc, tinh chất từ hạt Robusta.', 35000.00, NULL, 1, 'images/drink/epressso.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(3, 'Latte Macchiato', 'latte-macchiato', NULL, 'Sự kết hợp hoàn hảo giữa sữa và cafe.', 45000.00, NULL, 1, 'images/drink/latte.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(4, 'Cappuccino', 'cappuccino', NULL, 'Lớp bọt sữa mịn màng nghệ thuật.', 50000.00, NULL, 1, 'images/drink/cappuchino.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(5, 'Americano', 'americano', NULL, 'Cafe đen truyền thống pha loãng kiểu Mỹ.', 40000.00, NULL, 1, 'images/drink/americano.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(6, 'Mocha Coffee', 'mocha-coffee', NULL, 'Sự hòa quyện giữa Cafe và Chocolate.', 55000.00, NULL, 1, 'images/drink/mocha_coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(7, 'Trà Đào Cam Sả', 'tra-dao-cam-sa', NULL, 'Thanh mát, giải nhiệt cực tốt.', 55000.00, NULL, 2, 'images/drink/cam_xả.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(8, 'Trà Vải Hoa Hồng', 'tra-vai-hoa-hong', NULL, 'Hương vị hoa hồng dịu nhẹ bí truyền.', 55000.00, NULL, 2, 'images/drink/rose_tea.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(9, 'Matcha Latte', 'matcha-latte', NULL, 'Trà xanh Nhật Bản thượng hạng.', 60000.00, NULL, 2, 'images/drink/Matcha_Latte.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(10, 'Trà Sữa Bá Tước', 'earl-grey-milk-tea', NULL, 'Hương vị Earl Grey đặc trưng.', 55000.00, NULL, 2, 'images/drink/Earl_Grey_Milk_Tea.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(11, 'Trà Dâu Tây Tươi', 'strawberry-fruit-tea', NULL, 'Trái dâu tươi mọng, vị chua ngọt.', 55000.00, NULL, 2, 'images/drink/Strawberry_Fruit_Tea.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(12, 'Trà Sữa Ô Long', 'oolong-milk-tea', NULL, 'Trà Ô Long thơm lừng kết hợp sữa.', 50000.00, NULL, 2, 'images/drink/Oolong_Milk_Tea.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(13, 'Cà Phê Trứng', 'ca-phe-trung', NULL, 'Đặc sản Hà Nội béo ngậy, thơm lừng.', 65000.00, NULL, 3, 'images/drink/Egg_Coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(14, 'Cà Phê Kem Muối', 'ca-phe-kem-muoi', NULL, 'Vị mặn nhẹ của kem quyện cùng cafe.', 65000.00, NULL, 3, 'images/drink/Salted_Coffee.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(15, 'Tropical Fruit Punch', 'tropical-fruit-punch', NULL, 'Hỗn hợp trái cây nhiệt đới tươi.', 70000.00, NULL, 3, 'images/drink/Tropical_Fruit_Punch.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(16, 'Cà Phê Cốt Dừa', 'ca-phe-cot-dua', NULL, 'Béo ngậy hương dừa, mát lạnh.', 60000.00, NULL, 3, 'images/drink/Coconut_Coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(17, 'Bạc Xỉu Cream', 'bac-xiu-cream', NULL, 'Nhiều sữa, ít cafe kết hợp lớp kem mịn.', 45000.00, NULL, 3, 'images/drink/Bac_Xiu_Cream.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(18, 'Cà Phê Bơ', 'avocado-coffee', NULL, 'Sự kết hợp độc đáo giữa bơ sáp và cafe.', 65000.00, NULL, 3, 'images/drink/Avocado_Coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(19, 'Bánh Sừng Bò', 'croissant', NULL, 'Bánh sừng bò Pháp giòn tan thơm bơ.', 45000.00, NULL, 4, 'images/food/Croissant.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(20, 'Tiramisu Ý', 'tiramisu', NULL, 'Bánh phô mai cà phê trứ danh.', 65000.00, NULL, 4, 'images/food/Tiramisu.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(21, 'Bánh Nhung Đỏ', 'red-velvet', NULL, 'Vẻ ngoài quý phái, vị ngọt dịu.', 60000.00, NULL, 4, 'images/food/Red Velvet.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(22, 'Cheesecake Berry', 'cheesecake-berry', NULL, 'Phô mai béo ngậy và mứt quả mọng.', 60000.00, NULL, 4, 'images/food/Cheesecake_Berry.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(23, 'Bộ 3 Macarons', 'macarons-set', NULL, 'Bánh Macaron nhiều màu sắc ngọt ngào.', 55000.00, NULL, 4, 'images/food/Macarons_Set.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
-(24, 'Chocolate Brownie', 'chocolate-brownie', NULL, 'Bánh socola đậm đà, ít ngọt.', 50000.00, NULL, 4, 'images/food/Chocolate_Brownie.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47');
+INSERT INTO `products` (`product_id`, `product_name`, `slug`, `description`, `short_description`, `price`, `sale_price`, `size`, `category_id`, `image_main`, `images`, `stock`, `sold`, `featured`, `best_seller`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Cà Phê Sữa Đá', 'ca-phe-sua-da', NULL, 'Hương vị Việt truyền thống đậm đà.', 35000.00, NULL, NULL, 1, 'images/drink/vietnamese_coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(2, 'Espresso', 'espresso', NULL, 'Đậm đặc, tinh chất từ hạt Robusta.', 35000.00, NULL, NULL, 1, 'images/drink/epressso.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(3, 'Latte Macchiato', 'latte-macchiato', NULL, 'Sự kết hợp hoàn hảo giữa sữa và cafe.', 45000.00, NULL, NULL, 1, 'images/drink/latte.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(4, 'Cappuccino', 'cappuccino', NULL, 'Lớp bọt sữa mịn màng nghệ thuật.', 50000.00, NULL, NULL, 1, 'images/drink/cappuchino.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(5, 'Americano', 'americano', NULL, 'Cafe đen truyền thống pha loãng kiểu Mỹ.', 40000.00, NULL, NULL, 1, 'images/drink/americano.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(6, 'Mocha Coffee', 'mocha-coffee', NULL, 'Sự hòa quyện giữa Cafe và Chocolate.', 55000.00, NULL, NULL, 1, 'images/drink/mocha_coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(7, 'Trà Đào Cam Sả', 'tra-dao-cam-sa', NULL, 'Thanh mát, giải nhiệt cực tốt.', 55000.00, NULL, NULL, 2, 'images/drink/cam_xả.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(8, 'Trà Vải Hoa Hồng', 'tra-vai-hoa-hong', NULL, 'Hương vị hoa hồng dịu nhẹ bí truyền.', 55000.00, NULL, NULL, 2, 'images/drink/rose_tea.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(9, 'Matcha Latte', 'matcha-latte', NULL, 'Trà xanh Nhật Bản thượng hạng.', 60000.00, NULL, NULL, 2, 'images/drink/Matcha_Latte.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(10, 'Trà Sữa Bá Tước', 'earl-grey-milk-tea', NULL, 'Hương vị Earl Grey đặc trưng.', 55000.00, NULL, NULL, 2, 'images/drink/Earl_Grey_Milk_Tea.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(11, 'Trà Dâu Tây Tươi', 'strawberry-fruit-tea', NULL, 'Trái dâu tươi mọng, vị chua ngọt.', 55000.00, NULL, NULL, 2, 'images/drink/Strawberry_Fruit_Tea.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(12, 'Trà Sữa Ô Long', 'oolong-milk-tea', NULL, 'Trà Ô Long thơm lừng kết hợp sữa.', 50000.00, NULL, NULL, 2, 'images/drink/Oolong_Milk_Tea.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(13, 'Cà Phê Trứng', 'ca-phe-trung', NULL, 'Đặc sản Hà Nội béo ngậy, thơm lừng.', 65000.00, NULL, NULL, 3, 'images/drink/Egg_Coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(14, 'Cà Phê Kem Muối', 'ca-phe-kem-muoi', NULL, 'Vị mặn nhẹ của kem quyện cùng cafe.', 65000.00, NULL, NULL, 3, 'images/drink/Salted_Coffee.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(15, 'Tropical Fruit Punch', 'tropical-fruit-punch', NULL, 'Hỗn hợp trái cây nhiệt đới tươi.', 70000.00, NULL, NULL, 3, 'images/drink/Tropical_Fruit_Punch.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(16, 'Cà Phê Cốt Dừa', 'ca-phe-cot-dua', NULL, 'Béo ngậy hương dừa, mát lạnh.', 60000.00, NULL, NULL, 3, 'images/drink/Coconut_Coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(17, 'Bạc Xỉu Cream', 'bac-xiu-cream', NULL, 'Nhiều sữa, ít cafe kết hợp lớp kem mịn.', 45000.00, NULL, NULL, 3, 'images/drink/Bac_Xiu_Cream.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(18, 'Cà Phê Bơ', 'avocado-coffee', NULL, 'Sự kết hợp độc đáo giữa bơ sáp và cafe.', 65000.00, NULL, NULL, 3, 'images/drink/Avocado_Coffee.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(19, 'Bánh Sừng Bò', 'croissant', NULL, 'Bánh sừng bò Pháp giòn tan thơm bơ.', 45000.00, NULL, NULL, 4, 'images/food/Croissant.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(20, 'Tiramisu Ý', 'tiramisu', NULL, 'Bánh phô mai cà phê trứ danh.', 65000.00, NULL, NULL, 4, 'images/food/Tiramisu.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(21, 'Bánh Nhung Đỏ', 'red-velvet', NULL, 'Vẻ ngoài quý phái, vị ngọt dịu.', 60000.00, NULL, NULL, 4, 'images/food/Red Velvet.jpg', NULL, 0, 0, 0, 1, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(22, 'Cheesecake Berry', 'cheesecake-berry', NULL, 'Phô mai béo ngậy và mứt quả mọng.', 60000.00, NULL, NULL, 4, 'images/food/Cheesecake_Berry.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(23, 'Bộ 3 Macarons', 'macarons-set', NULL, 'Bánh Macaron nhiều màu sắc ngọt ngào.', 55000.00, NULL, NULL, 4, 'images/food/Macarons_Set.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47'),
+(24, 'Chocolate Brownie', 'chocolate-brownie', NULL, 'Bánh socola đậm đà, ít ngọt.', 50000.00, NULL, NULL, 4, 'images/food/Chocolate_Brownie.jpg', NULL, 0, 0, 0, 0, 1, '2026-03-30 12:13:47', '2026-03-30 12:13:47');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `settings`
+-- Table structure for table `settings`
 --
 
 CREATE TABLE `settings` (
@@ -341,7 +342,7 @@ CREATE TABLE `settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `settings`
+-- Dumping data for table `settings`
 --
 
 INSERT INTO `settings` (`setting_key`, `setting_value`, `setting_type`, `description`) VALUES
@@ -355,7 +356,7 @@ INSERT INTO `settings` (`setting_key`, `setting_value`, `setting_type`, `descrip
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tags`
+-- Table structure for table `tags`
 --
 
 CREATE TABLE `tags` (
@@ -365,7 +366,7 @@ CREATE TABLE `tags` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tags`
+-- Dumping data for table `tags`
 --
 
 INSERT INTO `tags` (`tag_id`, `tag_name`, `slug`) VALUES
@@ -378,7 +379,7 @@ INSERT INTO `tags` (`tag_id`, `tag_name`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -398,18 +399,18 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `full_name`, `phone`, `address`, `role`, `avatar`, `created_at`, `updated_at`, `last_login`, `status`) VALUES
-(1, 'admin', 'admin@coffeeblend.com', '$2y$10$KEI9i1Z/KvxlImyM1dWWBeCKDhFPCtezuoXopQ0VDnzWfPKSho6eq', 'Administrator', '0123456789', NULL, 'admin', NULL, '2026-03-27 12:03:03', '2026-03-29 02:25:18', '2026-03-29 09:25:18', 1);
+(1, 'admin', 'admin@coffeeblend.com', '$2y$10$KEI9i1Z/KvxlImyM1dWWBeCKDhFPCtezuoXopQ0VDnzWfPKSho6eq', 'Administrator', '0123456789', NULL, 'admin', NULL, '2026-03-27 12:03:03', '2026-05-07 06:46:52', '2026-05-07 13:46:52', 1);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `blog_comments`
+-- Indexes for table `blog_comments`
 --
 ALTER TABLE `blog_comments`
   ADD PRIMARY KEY (`comment_id`),
@@ -419,7 +420,7 @@ ALTER TABLE `blog_comments`
   ADD KEY `idx_status` (`status`);
 
 --
--- Chỉ mục cho bảng `blog_posts`
+-- Indexes for table `blog_posts`
 --
 ALTER TABLE `blog_posts`
   ADD PRIMARY KEY (`post_id`),
@@ -430,14 +431,14 @@ ALTER TABLE `blog_posts`
   ADD KEY `idx_published` (`published_at`);
 
 --
--- Chỉ mục cho bảng `blog_tags`
+-- Indexes for table `blog_tags`
 --
 ALTER TABLE `blog_tags`
   ADD PRIMARY KEY (`post_id`,`tag_id`),
   ADD KEY `tag_id` (`tag_id`);
 
 --
--- Chỉ mục cho bảng `bookings`
+-- Indexes for table `bookings`
 --
 ALTER TABLE `bookings`
   ADD PRIMARY KEY (`booking_id`),
@@ -447,16 +448,17 @@ ALTER TABLE `bookings`
   ADD KEY `idx_status` (`status`);
 
 --
--- Chỉ mục cho bảng `cart`
+-- Indexes for table `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cart_id`),
   ADD UNIQUE KEY `unique_cart` (`user_id`,`product_id`,`size`),
   ADD KEY `product_id` (`product_id`),
-  ADD KEY `idx_user` (`user_id`);
+  ADD KEY `idx_user` (`user_id`),
+  ADD KEY `idx_user_product` (`user_id`,`product_id`);
 
 --
--- Chỉ mục cho bảng `categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`category_id`),
@@ -465,14 +467,14 @@ ALTER TABLE `categories`
   ADD KEY `idx_parent` (`parent_id`);
 
 --
--- Chỉ mục cho bảng `contacts`
+-- Indexes for table `contacts`
 --
 ALTER TABLE `contacts`
   ADD PRIMARY KEY (`contact_id`),
   ADD KEY `idx_status` (`status`);
 
 --
--- Chỉ mục cho bảng `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`),
@@ -483,15 +485,16 @@ ALTER TABLE `orders`
   ADD KEY `idx_order_date` (`order_date`);
 
 --
--- Chỉ mục cho bảng `order_details`
+-- Indexes for table `order_details`
 --
 ALTER TABLE `order_details`
   ADD PRIMARY KEY (`detail_id`),
   ADD KEY `idx_order` (`order_id`),
-  ADD KEY `idx_product` (`product_id`);
+  ADD KEY `idx_product` (`product_id`),
+  ADD KEY `idx_order_product` (`order_id`,`product_id`);
 
 --
--- Chỉ mục cho bảng `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`),
@@ -502,13 +505,13 @@ ALTER TABLE `products`
   ADD KEY `idx_status` (`status`);
 
 --
--- Chỉ mục cho bảng `settings`
+-- Indexes for table `settings`
 --
 ALTER TABLE `settings`
   ADD PRIMARY KEY (`setting_key`);
 
 --
--- Chỉ mục cho bảng `tags`
+-- Indexes for table `tags`
 --
 ALTER TABLE `tags`
   ADD PRIMARY KEY (`tag_id`),
@@ -516,7 +519,7 @@ ALTER TABLE `tags`
   ADD UNIQUE KEY `slug` (`slug`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`),
@@ -526,81 +529,81 @@ ALTER TABLE `users`
   ADD KEY `idx_status` (`status`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `blog_comments`
+-- AUTO_INCREMENT for table `blog_comments`
 --
 ALTER TABLE `blog_comments`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `blog_posts`
+-- AUTO_INCREMENT for table `blog_posts`
 --
 ALTER TABLE `blog_posts`
   MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `bookings`
+-- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
   MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `cart`
+-- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
   MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `categories`
+-- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `contacts`
+-- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `order_details`
+-- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
   MODIFY `detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT cho bảng `tags`
+-- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
   MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `blog_comments`
+-- Constraints for table `blog_comments`
 --
 ALTER TABLE `blog_comments`
   ADD CONSTRAINT `blog_comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `blog_posts` (`post_id`) ON DELETE CASCADE,
@@ -608,52 +611,52 @@ ALTER TABLE `blog_comments`
   ADD CONSTRAINT `blog_comments_ibfk_3` FOREIGN KEY (`parent_id`) REFERENCES `blog_comments` (`comment_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `blog_posts`
+-- Constraints for table `blog_posts`
 --
 ALTER TABLE `blog_posts`
   ADD CONSTRAINT `blog_posts_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL;
 
 --
--- Các ràng buộc cho bảng `blog_tags`
+-- Constraints for table `blog_tags`
 --
 ALTER TABLE `blog_tags`
   ADD CONSTRAINT `blog_tags_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `blog_posts` (`post_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `blog_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`tag_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `bookings`
+-- Constraints for table `bookings`
 --
 ALTER TABLE `bookings`
   ADD CONSTRAINT `bookings_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL;
 
 --
--- Các ràng buộc cho bảng `cart`
+-- Constraints for table `cart`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `categories`
+-- Constraints for table `categories`
 --
 ALTER TABLE `categories`
   ADD CONSTRAINT `categories_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`category_id`) ON DELETE SET NULL;
 
 --
--- Các ràng buộc cho bảng `orders`
+-- Constraints for table `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL;
 
 --
--- Các ràng buộc cho bảng `order_details`
+-- Constraints for table `order_details`
 --
 ALTER TABLE `order_details`
   ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`);
 
 --
--- Các ràng buộc cho bảng `products`
+-- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`) ON DELETE SET NULL;

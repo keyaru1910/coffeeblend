@@ -20,7 +20,7 @@
 - Truy cập website qua địa chỉ: `http://localhost/coffee_blend/`.
 - Tài khoản quản trị mặc định (nếu có):
   - **Username**: `admin`
-  - **Password**: `123456` (Nếu không được, hãy kiểm tra file `backups/reset_admin.php`).
+  - **Password**: `admin123` (Nếu không được, hãy kiểm tra file `backups/reset_admin.php`).
 
 ---
 *Chúc bạn có trải nghiệm tốt với hệ thống Coffee Blend!*

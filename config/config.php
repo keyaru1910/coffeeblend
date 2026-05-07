@@ -25,25 +25,19 @@ try {
     ];
 
     $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
-}
-catch (PDOException $e) {
+} catch (PDOException $e) {
     die("Lỗi kết nối Cơ sở dữ liệu: " . $e->getMessage());
 }
 
 // Chèn các hàm tiện ích dùng chung
 require_once __DIR__ . '/functions.php';
 
-// Tự động xác định BASE_URL (giúp web chạy trên mọi máy mà không cần sửa code)
+// Tự động xác định BASE_URL
 if (!defined('BASE_URL')) {
     $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";
     $host = $_SERVER['HTTP_HOST'];
     
-    // Lấy đường dẫn thư mục chứa project
-    // Ví dụ: /coffee_blend/index.php -> /coffee_blend
-    // Ví dụ: /coffee_blend/admin/index.php -> /coffee_blend/admin
     $script_path = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
-    
-    // Loại bỏ các thư mục con nếu script đang chạy từ admin hoặc config
     $project_path = str_replace(['/config', '/admin', '/includes', '/backups', '/api'], '', $script_path);
     $project_path = rtrim($project_path, '/') . '/';
     
